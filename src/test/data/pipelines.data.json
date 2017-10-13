@@ -1,0 +1,24 @@
+{
+  "task_1": {
+    "description": "the description of task_1",
+    "tasks": {
+      "subtask_1": {
+        "description": "the description of task_1.subtask_1",
+        "pipeline": ["commands:echo", "concat"]
+      }
+    }
+  },
+  "task_2": {
+    "description": "the description of task_2",
+    "tasks": {
+      "subtask_1": {
+        "description": "the description of task_2.subtask_1",
+        "pipeline": ["commands:echo", "concat"]
+      },
+      "subtask_2": {
+        "description": "the description of task_2.subtask_2",
+        "pipeline": ["commands:echo", "concat"]
+      }
+    }
+  }
+}
