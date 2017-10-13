@@ -1,6 +1,6 @@
 {
   "name": "mules-gruntr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a wrapper for loading grunt tasks and pipelines based on a configuration",
   "main": "main.js",
   "scripts": {
