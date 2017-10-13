@@ -19,7 +19,7 @@
     setVerbosity: (level) => {
       if ([0, 1, 2].includes(parseInt(level))) {
         verbosity = level;
-        exports.write(`Verbosity set to ${level}`);
+        exports.debug(`Verbosity set to ${level}`);
         return;
       }
       exports.error(`Cannot set verbosity level to '${level}'`);

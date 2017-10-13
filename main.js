@@ -7,6 +7,7 @@
     initialize: (grunt, paths, config, register) => {
       Loader.loadGrunt(grunt);
       Loader.loadNpmTasks();
+      Loader.loadTasks(paths);
       Loader.initConfig(config);
       Engine.registerTaskHandlers(register);
     },

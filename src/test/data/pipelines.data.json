@@ -20,5 +20,14 @@
         "pipeline": ["commands:echo", "concat"]
       }
     }
+  },
+  "bad_task_1": {
+    "description": "the description of bad_task_1",
+    "tasks": {
+      "bad_subtask_1": {
+        "description": "the description of bad_task_1.bad_subtask_1",
+        "pipeline": ["bing", "baz", "boop"]
+      }
+    }
   }
 }

@@ -21,6 +21,8 @@
         expect(() => grunt.task.run(['commands', 'concat'])).to.not.throw();
         expect(() => grunt.task.run(['commands', 'concat', 'foo']))
           .to.throw(/Task \"foo\" not found/);
+        expect(() => grunt.task.run(['commands', 'concat', 'bad_task']))
+          .to.throw(/Task \"bad_task\" not found/);
 
         grunt.task._queue = [];
 
@@ -47,13 +49,23 @@
         }).to.not.throw();
       });
 
-      it('should run the tasks', () => {
+      it('should fail to run the tasks', () => {
         expect(() => {
           grunt.task.run('task_1');
           grunt.task.current = grunt.task._queue[0].task;
           main.Engine.runPipeline('subtask_2');
         }).to.throw();
       });
+
+      it('should fail to run a task in the pipeline', () => {
+        expect(() => {
+          grunt.task.run('bad_task_1');
+          grunt.task.current = grunt.task._queue[0].task;
+          main.Engine.runPipeline('bad_subtask_1');
+        }).to.throw();
+      });
+
     });
+
   });
 }
