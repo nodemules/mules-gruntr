@@ -17,6 +17,7 @@
   }
 
   function runPipeline(action) {
+    argumentHandler.init();
     let grunt = Loader.getGrunt();
     var task = grunt.task.current;
     var subTasks = Task.getSubTasks(task);

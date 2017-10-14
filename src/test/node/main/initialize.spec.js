@@ -41,6 +41,13 @@
         main.initialize(grunt, config.paths, gruntConfig, tasks);
       });
 
+      beforeEach(() => {
+        grunt.option('ls', false);
+        grunt.option('list', false);
+        grunt.option('D', false);
+        grunt.option('describe', false);
+      });
+
       it('should run the tasks', () => {
         expect(() => {
           grunt.task.run('task_1');

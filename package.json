@@ -4,7 +4,7 @@
   "description": "a wrapper for loading grunt tasks and pipelines based on a configuration",
   "main": "main.js",
   "scripts": {
-    "test": "mocha src/test/node/**/*.spec.js"
+    "test": "nyc --reporter=lcov mocha src/test/node/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "grunt-commands": "^0.1.8",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1"
   }
 }

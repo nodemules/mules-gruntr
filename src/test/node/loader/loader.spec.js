@@ -12,7 +12,7 @@
       loader.loadGrunt(grunt);
     });
 
-    describe('npmTaskLoader', () => {
+    describe('loading tasks', () => {
 
       let config, grunt;
 
@@ -40,5 +40,7 @@
       });
 
     });
+
   });
+
 }
